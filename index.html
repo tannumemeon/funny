@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do You Love Me?</title>
+<style>
+  body {
+   text-align: center;
+    align-items: center;
+    height: 100vh;
+    margin: 80px;
+  }
+  #question {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: rgb(9, 20, 168);
+  }
+  #buttons {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+  }
+  #yesButton{
+    background-color: green;
+    color: white;
+  }
+  #noButton{
+    background-color: red;
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <div class="qu">  <h2>Do you LOVE me?👰</h2></div>
+
+  <div id="buttons">
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+  </div>
+
+  <script>
+    document.getElementById('yesButton').addEventListener('click', function() {
+      alert('Yes i love you more more🤞!');
+    });
+
+    document.getElementById('noButton').addEventListener('mouseover', function() {
+      moveButton();
+    });
+
+    function moveButton() {
+      var button = document.getElementById('noButton');
+      var x = Math.random() * (window.innerWidth - button.offsetWidth);
+      var y = Math.random() * (window.innerHeight - button.offsetHeight);
+      button.style.position = 'absolute';
+      button.style.left = x + 'px';
+      button.style.top = y + 'px';
+    }
+  </script>
+</body>
+</html>
